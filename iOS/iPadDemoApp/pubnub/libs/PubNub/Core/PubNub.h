@@ -37,6 +37,7 @@
  */
 @interface PubNub : NSObject
 
+@property (nonatomic, readonly) enum _PNPubNubClientState state;
 
 #pragma mark - Class methods
 
