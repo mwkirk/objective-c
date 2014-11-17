@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
   s.frameworks =  'CFNetwork', 'SystemConfiguration'
-  s.library   = 'z'
+#  s.library   = 'z'
   s.osx.frameworks = 'CoreWLAN'
   s.osx.prefix_header_contents = <<-EOS
 #import "PNImports.h"
