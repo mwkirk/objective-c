@@ -41,6 +41,10 @@
 
 #pragma mark - Properties
 
+// mkirk - make public
+@property (nonatomic, readonly) enum _PNPubNubClientState state;
+- (NSString *)humanReadableStateFrom:(enum _PNPubNubClientState)state;
+
 /**
  Stores reference on observation center which has been configured for this \b PubNub client.
  */
