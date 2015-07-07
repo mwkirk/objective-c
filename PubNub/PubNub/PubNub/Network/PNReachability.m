@@ -251,7 +251,11 @@ PNReachabilityStatus PNReachabilityStatusForFlags(SCNetworkReachabilityFlags fla
         }
     }
     
-    
+    // mkirk, 7/6/2015: This is a hack-around for simulator often passing flag = 0 when network restored
+#if TARGET_IPHONE_SIMULATOR
+    if (flags == 0) status = PNReachabilityStatusReachableViaWiFi;
+#endif
+
     return status;
 }
 
